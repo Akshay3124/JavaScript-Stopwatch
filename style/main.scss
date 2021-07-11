@@ -1,0 +1,83 @@
+@mixin transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    }
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: whitesmoke url(../assests/mika-dUaf3cHs9Xk-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.stopwatch {
+    display: flex;
+    height: 100vh;
+}
+
+#section {
+    box-shadow: 10px 5px grey; 
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid rgb(201, 188, 188);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #control {
+        display: flex;
+        justify-content: center;
+    }
+    
+    p {
+        font-size: 2em;
+
+        #minutes {
+            color: red;
+        }
+        #seconds {
+            color: green;
+        }
+        #milis {
+            color: blue;
+        }
+
+    }
+
+    button {
+        box-shadow: 2px 2px 5px grey;
+        text-decoration: none;
+        cursor:pointer;
+        text-transform: uppercase;
+        margin: 10px;
+        padding: 10px 20px;
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        &:hover {
+            @include transition;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+    }
+
+        ul {
+            list-style: none;
+            background-color: whitesmoke;
+            border-radius: 20%;
+            margin: 10px auto;
+            overflow: hidden;
+            padding: 0;
+
+            li {
+                padding: 10px;
+            }
+        }
+}
